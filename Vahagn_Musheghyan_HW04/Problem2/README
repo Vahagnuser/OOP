@@ -1,0 +1,76 @@
+Author: Vahagn Musheghyan
+
+Duck Simulation Project
+Overview
+This Java project simulates a Duck with customizable eye and beak characters. The Ducks can manage friendships and identify special Ducks based on specific criteria. The project consists of two main classes: Duck and DuckDemo.
+
+Classes
+Duck
+The Duck class represents a duck with customizable eye and beak characters. It includes methods for managing friendships, checking similarities and identities, and identifying special Ducks. The class also includes static methods and variables for special Ducks such as the elderOracle and influencerStar.
+
+Methods
+Constructors:
+Duck(char eye, char beak): Initializes a Duck with specified eye and beak characters.
+Duck(): Initializes a Duck with random eye and beak characters.
+Duck(Duck other): Copy constructor to create a new Duck identical to another Duck.
+Getters and Setters:
+char getEye(): Returns the eye character of the Duck.
+char getBeak(): Returns the beak character of the Duck.
+Duck[] getFriendList(): Returns the array of Duck objects that are friends with this Duck.
+int getNumberOfFriends(): Returns the number of current friends of this Duck.
+void setEye(char eye): Sets the eye character of this Duck.
+void setBeak(char beak): Sets the beak character of this Duck.
+Static Methods:
+Duck getElderOracle(): Returns the elderOracle Duck, the first created Duck object.
+Duck getInfluencerStar(): Returns the influencerStar Duck, the Duck with the most friends.
+boolean isSimilar(Duck d1, Duck d2): Checks if two Duck objects share at least one common feature (eye or beak).
+boolean isIdentical(Duck d1, Duck d2): Checks if two Duck objects have the same eye and beak characters.
+Instance Methods:
+boolean isSimilar(Duck other): Checks if this Duck is similar to another Duck.
+boolean isIdentical(Duck other): Checks if this Duck is identical to another Duck.
+void befriend(Duck other): Adds another Duck to this Duck's friend list, establishing a mutual friendship.
+String toString(): Returns a string representation of this Duck.
+static void print(Duck[] ducks): Prints an array of Duck objects in a formatted grid.
+DuckDemo
+The DuckDemo class contains the main method to demonstrate the usage of the Duck class. It creates Ducks, prints them, demonstrates copying a Duck, manages friendships, checks similarities and identities, and accesses special Ducks.
+
+Usage
+To run the demo:
+
+Compile the Java files:
+
+javac Vahagn_Musheghyan_HW04/Problem2/Duck.java Vahagn_Musheghyan_HW04/Problem2/DuckDemo.java
+
+Run the DuckDemo class:
+java Vahagn_Musheghyan_HW04.Problem2.DuckDemo
+
+Output
+The DuckDemo class will produce the following output:
+
+
+Original Ducks:
+<(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>
+   \___/    \___/    \___/    \___/    \___/    \___/    \___/    \___/    \___/    \___/ 
+...
+
+Copied Duck: <(^)>
+
+Befriending some ducks...
+...
+
+Ducks after befriending:
+<(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>____ <(^)>
+   \___/    \___/    \___/    \___/    \___/    \___/    \___/    \___/    \___/    \___/ 
+...
+
+Checking duck similarities and identities:
+Is ducks[0] similar to ducks[1]? true
+Is ducks[0] identical to ducks[4]? false
+Is ducks[2] similar to ducks[3]? true
+Is ducks[1] identical to ducks[2]? false
+
+Elder Oracle Duck: <(^)>
+Influencer Star Duck: <(^)>
+...
+
+Error: Memory limit reached for friends list. Cannot add more friends.

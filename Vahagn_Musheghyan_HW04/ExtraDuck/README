@@ -1,0 +1,91 @@
+Author: Vahagn Musheghyan
+
+EfficientDuck and EfficientDuckDemo
+Overview
+The EfficientDuck class represents a more efficient version of a duck using a single byte variable to store both eye and beak characters. This class also manages a list of friends and includes functionality for special ducks, including the elder oracle and influencer star. The EfficientDuckDemo class demonstrates the functionality of the EfficientDuck class.
+
+Features
+EfficientDuck Class
+
+Represents a duck with a single byte for eye and beak.
+Manages friendships with other ducks.
+Identifies the first created duck as the elder oracle.
+Identifies the duck with the most friends as the influencer star.
+Supports checking for similarity and identity between ducks.
+Includes methods for copying ducks, random duck creation, and printing ducks in a formatted grid.
+EfficientDuckDemo Class
+
+Demonstrates the creation and management of EfficientDuck objects.
+Shows copying of ducks, establishing friendships, and checking similarities and identities.
+Prints the ducks and their friend lists.
+Class Descriptions
+EfficientDuck
+Fields
+
+byte eyeAndBeak: Combined byte representing both the eye and beak of the duck.
+EfficientDuck[] friendList: Array to store friends.
+int numberOfFriends: Current number of friends.
+static EfficientDuck elderOracle: The first created duck.
+static EfficientDuck influencerStar: The duck with the most friends.
+Constructors
+
+EfficientDuck(byte eyeAndBeak): Constructs a duck with the specified eye and beak.
+EfficientDuck(): Constructs a duck with random eye and beak characters.
+EfficientDuck(EfficientDuck other): Copy constructor.
+Methods
+
+byte getEyeAndBeak(): Returns the combined byte representing both eye and beak.
+EfficientDuck[] getFriendList(): Returns the array of friends.
+int getNumberOfFriends(): Returns the number of friends.
+static EfficientDuck getElderOracle(): Returns the elder oracle duck.
+static EfficientDuck getInfluencerStar(): Returns the influencer star duck.
+void setEyeAndBeak(byte eyeAndBeak): Sets the combined byte for eye and beak.
+static boolean isSimilar(EfficientDuck d1, EfficientDuck d2): Checks if two ducks are similar.
+boolean isSimilar(EfficientDuck other): Checks if this duck is similar to another duck.
+static boolean isIdentical(EfficientDuck d1, EfficientDuck d2): Checks if two ducks are identical.
+boolean isIdentical(EfficientDuck other): Checks if this duck is identical to another duck.
+String toString(): Returns a string representation of the duck.
+static void print(EfficientDuck[] ducks): Prints an array of ducks in a formatted grid.
+void befriend(EfficientDuck other): Establishes a mutual friendship with another duck.
+EfficientDuckDemo
+main(String[] args)
+Creates an array of EfficientDuck objects.
+Initializes ducks with random eye and beak characters.
+Prints the array of ducks.
+Demonstrates copying a duck.
+Establishes friendships between ducks.
+Prints the updated array of ducks with their friends.
+Checks and prints similarities and identities between ducks.
+How to Run
+Compile the EfficientDuck and EfficientDuckDemo classes.
+
+javac Vahagn_Musheghyan_HW04/ExtraDuck/EfficientDuck.java Vahagn_Musheghyan_HW04/ExtraDuck/EfficientDuckDemo.java
+
+Run the EfficientDuckDemo class.
+
+
+java Vahagn_Musheghyan_HW04.ExtraDuck.EfficientDuckDemo
+
+Example Output
+
+Original EfficientDucks:
+0(2)____ 5(3)____ 1(4)____ 3(0)____ 4(1)____ 
+   \___/    \___/    \___/    \___/    \___/ 
+
+Copied EfficientDuck: 0(2)
+
+Befriending some EfficientDucks...
+EfficientDucks after befriending:
+0(2)____ 5(3)____ 1(4)____ 3(0)____ 4(1)____ 
+   \___/    \___/    \___/    \___/    \___/ 
+
+Checking EfficientDuck similarities and identities:
+Is ducks[0] similar to ducks[1]? true
+Is ducks[0] identical to ducks[4]? false
+Is ducks[2] similar to ducks[3]? false
+Is ducks[1] identical to ducks[2]? false
+Notes
+The EfficientDuck class uses a single byte to store both eye and beak characters for memory efficiency.
+The maximum number of friends is limited to 100.
+Friendships are mutual and both ducks add each other to their friend lists.
+Contact

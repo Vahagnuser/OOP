@@ -1,0 +1,271 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{listings} % for typesetting code
+\usepackage{amsfonts}
+\begin{document}
+
+\section*{EX.1 Number Conversions}
+\section*{ Calculations were made on paper }
+\subsection*{a. \( 1100101110_2 \) to decimal}
+\[
+1100101110_2 = 814_{10}
+\]
+
+\subsection*{b. \( 11001000011101_2 \) to hexadecimal}
+\[
+11001000011101_2 = 321D_{16}
+\]
+
+\subsection*{c. \( 11001000011101_2 \) to octal}
+\[
+11001000011101_2 = 31075_8
+\]
+
+\subsection*{d. \( 458_{10} \) to binary}
+\[
+458_{10} = 111001010_2
+\]
+
+\subsection*{e. \( 6197_{10} \) to octal}
+\[
+6197_{10} = 14605_8
+\]
+
+\subsection*{f. \( 15816_{10} \) to hexadecimal}
+\[
+15816_{10} = 3DC8_{16}
+\]
+
+\subsection*{g. \( 245_8 \) to binary}
+\[
+245_8 = 010100101_2
+\]
+
+\subsection*{h. \( 5026_8 \) to decimal}
+\[
+5026_8 = 2582_{10}
+\]
+
+\subsection*{i. \( 437_8 \) to hexadecimal}
+\[
+437_8 = 23F_{16}
+\]
+
+\subsection*{j. \( 9FEA_{16} \) to binary}
+\[
+9FEA_{16} = 1001111111101010_2
+\]
+
+\subsection*{k. \( 9FEA_{16} \) to octal}
+\[
+9FEA_{16} = 117752_8
+\]
+
+\subsection*{l. \( 1D4C_{16} \) to decimal}
+\[
+1D4C_{16} = 7500_{10}
+\]
+
+\subsection*{m. \( 3G8_{19} \) to 13-base notation}
+\[
+3G8_{19} = 836_{13}
+\]
+
+
+\section*{EX.2 Signed Binary to Decimal Conversion}
+
+\subsection*{a. \( 0000\ 1000\ 0001\ 1010\ 0110\ 0101\ 0111\ 0011 \)}
+
+Since the binary number starts with a 0, it is positive. We convert it directly to decimal:
+
+\[
+(0 \times 2^{31}) + (0 \times 2^{30}) + (0 \times 2^{29}) + (0 \times 2^{28}) +\] \[(1 \times 2^{27}) + (0 \times 2^{26}) + (0 \times 2^{25}) + (0 \times 2^{24}) + (0 \times 2^{23}) + (0 \times 2^{22}) + (0 \times 2^{21}) + (1 \times 2^{20}) +\]\[ (1 \times 2^{19}) + (0 \times 2^{18}) + (1 \times 2^{17}) + (0 \times 2^{16}) + (0 \times 2^{15}) + (1 \times 2^{14}) + (1 \times 2^{13}) + (0 \times 2^{12}) +\]\[ (0 \times 2^{11}) + (1 \times 2^{10}) + (0 \times 2^{9}) + (1 \times 2^{8}) + (0 \times 2^{7}) + (1 \times 2^{6}) + (1 \times 2^{5}) + (1 \times 2^{4}) +\] \[(0 \times 2^{3}) + (0 \times 2^{2}) + (1 \times 2^{1}) + (1 \times 2^{0}) = (135947635)_{10}\]
+
+
+
+\subsection*{b. \( 1000\ 1000\ 0001\ 1010\ 0110\ 0101\ 0111\ 0011 \)}
+
+Since the binary number starts with a 1, it is negative in two's complement format. To find the decimal value, we follow these steps:
+
+\begin{enumerate}
+    \item Find the two's complement (invert the bits and add 1).
+    \item Convert the resulting binary number to decimal.
+    \item Negate the result.
+\end{enumerate}
+
+The binary number:
+
+\[
+1000\ 1000\ 0001\ 1010\ 0110\ 0101\ 0111\ 0011_2
+\]
+
+Step 1: Invert the bits:
+\[
+0111\ 0111\ 1110\ 0101\ 1001\ 1010\ 1000\ 1100_2
+\]
+
+Add 1:
+\[
+0111\ 0111\ 1110\ 0101\ 1001\ 1010\ 1000\ 1100_2 + 1 = 0111\ 0111\ 1110\ 0101\ 1001\ 1010\ 1000\ 1101_2
+\]
+
+Step 2: Convert to decimal:
+\[
+0111\ 0111\ 1110\ 0101\ 1001\ 1010\ 1000\ 1101_2
+\]
+
+\[
+(0 \times 2^{31}) + (1 \times 2^{30}) + (1 \times 2^{29}) + (1 \times 2^{28}) + (0 \times 2^{27}) + (1 \times 2^{26}) + (1 \times 2^{25}) + (1 \times 2^{24}) + (1 \times 2^{23}) + \]\[(1 \times 2^{22}) + (1 \times 2^{21}) + (0 \times 2^{20}) + (0 \times 2^{19}) + (1 \times 2^{18}) + (0 \times 2^{17}) + (1 \times 2^{16}) + (1 \times 2^{15}) +\]\[ (0 \times 2^{14}) + (0 \times 2^{13}) + (1 \times 2^{12}) + (1 \times 2^{11}) + (0 \times 2^{10}) + (1 \times 2^{9}) + (0 \times 2^{8}) + \]\[(1 \times 2^{7}) + (0 \times 2^{6}) + (0 \times 2^{5}) + (0 \times 2^{4}) + (1 \times 2^{3}) + (1 \times 2^{2}) + (0 \times 2^{1}) + (1 \times 2^{0}) = (2011536013)_{10}
+\]
+
+
+
+Step 3: Negate the result:
+
+\[
+-2011536013
+\]
+
+\subsection*{EX.3}
+
+\subsection*{(a) \(12345 \& 5013\)}
+
+\begin{align*}
+12345_{10} &= 0011000000111001_2 \\
+5013_{10} &= 0001001110010101_2 \\
+12345 \& 5013 &= 0011000000111001_2 \& 0001001110010101_2 \\
+&= 0001000000010001_2 \\
+&= 4113_{10}
+\end{align*}
+
+\subsection*{(b) \(432 \, | \, -502\)}
+
+\begin{align*}
+432_{10} &= 0000000110110000_2 \\
+502_{10} &= 0000000111110110_2 \\
+-502_{10} &= 1111111000001010_2 \\
+432 \, | \, -502 &= 0000000110110000_2 \, | \, 1111111000001010_2 \\
+&= 1111111110111010_2 \\
+&= 1111111110111010_2 \text{ (in two's complement, invert and add 1)} \\
+&= 0000000001000101_2 + 1 \\
+&= 0000000001000110_2 \\
+&= -70_{10}
+\end{align*}
+
+
+\subsubsection*{(c) \( 19 \hat{} (\sim 67) \)}
+
+
+\begin{align*}
+19_{10} &= 0000000000010011_2 \\
+67_{10} &= 0000000001000011_2 \\
+\sim 67_{10} &= 1111111110111100_2 \\
+19 \, ^ \, \sim 67 &= 0000000000010011_2 \,  ^ \, 1111111110111100_2 \\
+&= 1111111110101111_2 \\
+&= 1111111110101111_2 \text{ (in two's complement, invert and add 1)} \\
+&= 0000000001010000_2 + 1 \\
+&= 0000000001010001_2 \\
+&= -81_{10}
+\end{align*}
+
+\subsection*{(d) \(-178 \, >> \, 2\)}
+
+\begin{align*}
+178_{10} &= 0000000010110010_2 \\
+-178_{10} &= 1111111101001110_2 \\
+-178 \, >> \, 2 &= 1111111101001110_2 \, >> \, 2 \\
+&= 1111111111010011_2 \\
+&= 1111111111010011_2 \text{ (in two's complement, invert and add 1)} \\
+&= 0000000000101100_2 + 1 \\
+&= 0000000000101101_2 \\
+&= -45_{10}
+\end{align*}
+
+\subsection*{(e) \( ( \sim 178 + 1) \, >>> \, 4 \)}
+
+\begin{align*}
+178_{10} &= 0000000010110010_2 \\
+\sim 178_{10} &= 1111111101001101_2 \\
+(\sim178 + 1) &= 1111111101001101_2 + 1 \\
+&= 1111111101001110_2 \\
+(\sim 178 + 1) \, >>> \, 4 &= 1111111101001110_2 \, >>> \, 4 \\
+&= 111111110100_2 \\
+&= 268435444_{10}
+\end{align*}
+
+\section*{EX.4Arithmetic Operations in 8-bit Two's Complement Notation}
+
+\subsection*{(a) \(88 - 50\)}
+
+1. Convert 88 and 50 to their 8-bit binary representations:
+\[
+88_{10} = 01011000_2
+\]
+\[
+50_{10} = 00110010_2
+\]
+
+2. Convert 50 to its two's complement (invert and add 1):
+\[
+50_{10} = 00110010_2 \quad \rightarrow \quad \text{invert} \rightarrow 11001101_2 \quad \rightarrow \quad \text{add 1} \rightarrow 11001110_2
+\]
+
+3. Perform the addition:
+\[
+01011000_2 + 11001110_2 = 100100110_2
+\]
+
+4. Consider only the least significant 8 bits:
+\[
+100100110_2 \rightarrow 00100110_2
+\]
+
+5. Convert the result back to decimal:
+\[
+00100110_2 = 38_{10}
+\]
+
+Thus, \(88 - 50 = 38\) is mathematically sound and valid.
+
+\subsection*{(b) \(88 + 50\)}
+
+1. Convert 88 and 50 to their 8-bit binary representations:
+\[
+88_{10} = 01011000_2
+\]
+\[
+50_{10} = 00110010_2
+\]
+
+2. Perform the addition:
+\[
+01011000_2 + 00110010_2 = 10001010_2
+\]
+
+3. Consider only the least significant 8 bits:
+\[
+10001010_2
+\]
+
+4. Convert the result back to decimal (two's complement):
+\[
+10001010_2 \quad \text{(negate the bits)} \rightarrow 01110101_2 \quad \rightarrow \quad \text{add 1} \rightarrow 01110110_2 = 118_{10} \rightarrow -118_{10}
+\]
+
+Thus, \(88 + 50 = -118\) in 8-bit two's complement notation. The result is not mathematically valid in standard arithmetic due to overflow.
+\subsection*{EX.5 Java Hello World }
+
+\lstset{language=Java} % set the language for the code
+\begin{lstlisting}
+public class HelloWorld {
+    public static void main(String[] args) {
+    String UserName = "Vahagn";
+       String UserId = "MU6613477";
+        
+       System.out.println("Hello user. My name is " 
+                       + UserName + ". My ID is " + UserId);
+    }
+}
+\end{lstlisting}
+\end{document}
+

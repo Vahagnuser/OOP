@@ -1,0 +1,56 @@
+Author: Vahagn Musheghyan
+
+Polyline and Point Classes
+Overview
+This Java project demonstrates the use of classes to represent points in a 2D space and polylines consisting of multiple points. The project consists of three main classes: Point, Polyline, and Demo.
+
+Classes
+Point
+The Point class represents a point in a 2D space with x and y coordinates. It provides methods to access these coordinates, calculate the distance between two points, and represent the point as a string.
+
+Methods
+Constructor: Point(double x, double y) - Initializes a new point with the specified coordinates.
+getX(): Returns the x coordinate of the point.
+getY(): Returns the y coordinate of the point.
+toString(): Returns a string representation of the point in the format [x, y].
+static DistanceBetween(Point p1, Point p2): Calculates and returns the distance between two points.
+Distance(Point ob): Calculates and returns the distance between the current point and another point.
+Polyline
+The Polyline class represents a polyline, which is a series of connected line segments. It maintains an array of Point objects and provides methods to add points, get and set points, calculate the total length of the polyline, and represent the polyline as a string.
+
+Methods
+Constructor: Polyline() - Initializes a new empty polyline.
+Copy Constructor: Polyline(Polyline ob) - Initializes a new polyline as a copy of an existing polyline.
+add(Point p): Adds a new point to the polyline.
+getPoints(): Returns an array of points in the polyline.
+setPoints(Point[] p): Sets the points of the polyline to the specified array of points.
+getTotalLength(): Calculates and returns the total length of the polyline.
+toString(): Returns a string representation of the polyline, with points separated by arrows (->).
+Demo
+The Demo class contains the main method to demonstrate the usage of the Point and Polyline classes. It creates points and a polyline, calculates distances, and displays the results.
+
+Usage
+To run the demo:
+
+Compile the Java files:
+
+
+javac Vahagn_Musheghyan_HW04/Problem1/Point.java Vahagn_Musheghyan_HW04/Problem1/Polyline.java Vahagn_Musheghyan_HW04/Problem1/Demo.java
+
+Run the Demo class:
+
+java Vahagn_Musheghyan_HW04.Problem1.Demo
+
+Output
+The Demo class will produce the following output:
+Point p1: [1.0,2.0]
+Point p2: [3.0,4.0]
+Point p3: [5.0,6.0]
+Distance between p1 and p2: 2.8284271247461903
+Polyline: [1.0,2.0] -> [3.0,4.0] -> [5.0,6.0]
+Total length of the polyline: 5.656854249492381
+Copy of the polyline: [1.0,2.0] -> [3.0,4.0] -> [5.0,6.0]
+Modified original polyline: [1.0,2.0] -> [3.0,4.0] -> [5.0,6.0] -> [7.0,8.0]
+Unchanged copy of the polyline: [1.0,2.0] -> [3.0,4.0] -> [5.0,6.0]
+Points in the polyline: [1.0,2.0] [3.0,4.0] [5.0,6.0] [7.0,8.0] 
+Polyline after setting new points: [10.0,10.0] -> [20.0,20.0]

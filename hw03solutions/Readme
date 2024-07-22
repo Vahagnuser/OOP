@@ -1,0 +1,32 @@
+Author: Hovak Abramian
+
+Compiled and tested with java-1.21.0-openjdk-amd64
+
+In p2, the method isPalindrome(String) will satisfy the requirements more efficiently.
+User input fetched through the nextInt() method, is akin to a next() method call with
+additional processing for conversion to int. These steps are not relevant for determining
+palindromic values. Note that by definition, negative numbers are not palindromic.
+
+The isPalindrome(int) method is more suitable for cases where the value is already of type int,
+such as randomly generated int values. It is computationally cheaper to process ints directly as
+opposed to converting them to Strings.
+
+More information about Scanner can be found at the following link.
+https://docs.oracle.com/javase/8/docs/api/java/util/Scanner.html
+
+In p4, the recursive calls are as follows
+factors(60)
+factors(60, 2)
+factors(factors(30, 2), 2)
+factors(factors(factors(15, 2), 2), 2)
+factors(factors(factors(15, 3), 2), 2)
+factors(factors(factors(factors(5, 3), 3), 2), 2)
+factors(factors(factors(factors(5, 4), 3), 2), 2)
+factors(factors(factors(factors(5, 5), 3), 2), 2)
+factors(factors(factors(factors(factors(1, 6), 5), 3), 2), 2)
+Base case reached, coming back up.
+factors(factors(factors(factors({}, 5), 3), 2), 2)
+factors(factors(factors({5}, 3), 2), 2)
+factors(factors({5, 3}, 2), 2)
+factors({5, 3, 2}, 2)
+{5, 3, 2, 2}

@@ -1,0 +1,25 @@
+Author: Vahagn Musheghyan
+
+Instructions:
+1. Extracting the ZIP:
+   - Extract the contents of Vahagn_Musheghyan_HW03.zip using your preferred archive manager.
+
+2. Ensure all `.java` files are in the `Vahagn_Musheghyan_HW04` subdirectories.
+
+3. In all subdirectories have their README please follow them.
+
+
+This project contains solutions to the following problems:
+
+1. Problem1:Polylines and points classes.
+
+2. Problem2:Duck Class
+
+3. EfficientDuck: Class for Problem2
+
+For more information about Classes can be found in the local directories
+ For Exemple:
+                Vahagn_Musheghyan_HW03/Problem1/README
+Testing:
+- Each program has been tested with various inputs to ensure correctness.
+
